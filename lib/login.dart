@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_gojek/Home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -14,14 +15,14 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Color(0xfff6f6f6),
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.only(top: 115),
+          margin: EdgeInsets.only(top: 50),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(bottom: 42),
+                  margin: EdgeInsets.only(bottom: 38),
                   child: Image.asset(
                     'assets/logo.png',
                     width: 400,
@@ -29,29 +30,31 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 child: Image.asset(
                   'assets/logo_gojek.png',
                   width: 85,
                 ),
               ),
-              SizedBox(height: 18,),
               Container(
+                margin: EdgeInsets.only(bottom:15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Welcome, Keith!', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
-                    SizedBox(height: 12,),
+                    Text('Welcome, Keith!', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                    SizedBox(height: 12),
                     Text('Discover a hassle-free life with the super app for all you needs.', style: TextStyle(color: Colors.grey[700], fontSize: 16),)
                   ],
                 ),
               ),
-              SizedBox(height: 18,),
               Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     ElevatedButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ListAllLeague()));
+                        },
                         style: ElevatedButton.styleFrom(primary: Color(0xff18791f),
                           padding: EdgeInsets.symmetric(vertical: 12),
                           shape: RoundedRectangleBorder(
@@ -71,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(top: 50, right: 10),
+                margin: const EdgeInsets.only(top: 30, right: 10),
                 child: RichText(
                     text: const TextSpan(
                         text: 'By logging in or registering , you agree to our',

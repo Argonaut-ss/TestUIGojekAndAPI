@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_ui_learning/login.dart';
+import 'package:ui_gojek/login.dart';
 
 void main() {
   runApp(const MyApp());

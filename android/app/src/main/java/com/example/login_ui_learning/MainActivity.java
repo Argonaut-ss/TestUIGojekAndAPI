@@ -1,4 +1,4 @@
-package com.example.login_ui_learning;
+package com.example.ui_gojek;
 
 import io.flutter.embedding.android.FlutterActivity;
 
